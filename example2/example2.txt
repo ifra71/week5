@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int isgreater(int number1,int number2);
+
+main();
+{
+  int number1;
+  int number2;
+
+  cout" enter first number " ;
+  cin>> number1;
+
+  cout << " enter second number " ;
+  cin>> number2;
+  isgreater(number1,number2);
+}
+int isgreater(int number1,int number2)
+{
+  if(number1>number2)
+   {
+     return number1;
+   }
+  if(number2>number1)
+   {
+     return number2;
+    }
+}

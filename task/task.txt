@@ -1,0 +1,37 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+float calculateheight(float distance, float degree);
+main()
+{
+  float base;
+  float degrees;
+  float height;
+  
+  cout<< " enter value of base : " ;
+  cin>> base;
+  cout<< " enter degrees " ;
+  cin>>degree;
+  height=calculateheight(distance,degree);
+  cout<< " height is " << height << endl;
+  
+
+float calculateheight(float distance , float dgree)
+{
+  float radian;
+  float radians;
+  float angle;
+  float height
+ 
+  radian=57.2958;
+  radians= degree/radian;
+  angle=tan(radians);
+  height= angle*base;
+  
+  return height;
+}
+  
+  
+
+  
+  

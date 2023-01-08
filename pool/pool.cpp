@@ -1,0 +1,77 @@
+#include<iostream>
+using namespace std;
+float CalFill(int, int, float);
+int CalPipeContribution(int, float, float);
+
+
+
+main()
+
+{
+    int volume;
+    int p1;
+    int p2;
+    int pipeperc1,pipeperc2;
+    float hour;
+    cout<<" enter volume ";
+    cin>> volume;
+    cout<< " enter flow rate of first pipe " ;
+    cin>> p1;
+    cout<< " enter flowrate of second pipe " ;
+    cin>> p2;
+    cout<< " enter hours the worker is absent";
+    cin>> hour;
+
+	int overflown;
+	float pool_filled, pool_filled_percent;
+
+	
+	pool_filled = CalFill(p1,p2,hour);
+	pipeperc1 = CalPipeContribution(p1,pool_filled,hour);
+	pipeperc2= CalPipeContribution(p2,pool_filled,hour);
+
+	pool_filled_percent = (pool_filled/volume) * 100;
+	
+	
+	if(pool_filled<=volume)
+	{
+	
+		cout << "The pool is " << pool_filled_percent << "% full. "; 
+		cout << "Pipe 1: " << pipeperc1 << "%. ";
+		cout << "Pipe 2: " << pipeperc2 << "%. ";
+	
+	}
+	if(pool_filled>volume)
+	{
+		
+		overflown = pool_filled - volume;
+		cout << "For " << hour << " hours the pool overflows with " << overflown << " liters.";
+
+	}
+
+}
+
+float CalFill(int p1, int p2, float hour)
+{
+
+	int total_flow, pool_filled_percent;
+	float p_f;
+
+	total_flow = p1 + p2;
+	p_f = total_flow * hour;
+
+	return p_f; 
+
+}
+
+int CalPipeContribution(int pipe, float pool_filled, float hour)
+{
+
+	int pipe_con, pipepercent;
+
+	pipe_con = pipe * hour;
+	pipepercent = (pipe_con / pool_filled) * 100;
+
+	return pipepercent;
+
+}

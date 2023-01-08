@@ -1,0 +1,34 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+void pyramidvol(int lenght , int width , int height, float volume , string outputunit);
+main()
+{
+  
+   result=pyramidvol(lenght,width,height,volume,outputunit);
+
+}
+
+void pyramidvol(int lenght , int width , int height, float volume , string outputunit)
+{
+   int l;
+   int w;
+   int h;
+   string outunit;
+   int cm,m,km;
+   float result;
+   float volumeofpyramid;
+   cout<< " enter lenght of pyramid";
+   cin>>l;
+   cout<< " enter width of pyramid ";
+   cin>> w;
+   cout << " enter height of pyramid ";
+   cin>> h;
+   cout<< " enter output unit (cm,m,km) " ;
+   cin>> outunit;
+   volumeofpyramid=[(l*w*h)/3]*outunit;
+   result=volumeofpyramid;
+   return result;
+   
+   
+}

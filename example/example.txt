@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int add ( int number1 , int number 2);
+float divide(float number1 , float number2);
+main()
+{
+  int num1,num2;
+  cout << "enter first number : " ;
+  cin>>num1;
+  cout << " enter second number : " ;
+  cin>>num2;
+  
+  int add (number1 ,number2);
+  cout<< "sum is  " << sum << endl; 
+  float divide(number1 , number2);
+  cout << "division is"<< divide << endl;
+
+  }
+void add ( int number1 , int number 2)
+{
+  int sum;
+  sum=number1+number2;
+  return sum;
+}
+float divide(int number1 , int number2)
+{
+  float division=number1/number2;
+  return division;
+}
